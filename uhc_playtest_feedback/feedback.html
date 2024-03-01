@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        #backgroundImage {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #titleContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            height: auto;
+            margin-bottom: 50px;
+            /* margin-top: 10%; Adjusted margin-top for spacing */
+        }
+
+        #titleVideo {
+            width: 650px;
+        }
+
+
+        #buttonsContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            flex: 1;
+            margin-top: 20px; /* Centered the buttons horizontally */
+            margin-bottom: 100px; /* Centered the buttons horizontally */
+        }
+
+        .button {
+            width: 400px;
+            margin: 15px;
+            transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .button img {
+            width: 100%;
+            height: auto;
+        }
+
+        .button:hover{
+            width: 410px;
+            transform: translateX(10%);
+            transform: translateY(-10%);
+            filter: saturate(100%) brightness(130%) hue-rotate(-10deg);
+        }
+
+
+
+        #footer {
+            width: 400px;
+            padding-bottom: 20px;
+        }
+
+        #footerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<img id="backgroundImage" src="graphics/background.jpg" alt="Background Image">
+
+<div id="titleContainer">
+    <video id="titleVideo" preload playsinline autoplay muted>
+        <source src="video/title.webm" type="video/webm">
+    </video>
+</div>
+
+<div id="buttonsContainer">
+    <!-- <a href="#" class="button"><img src="graphics/feedback_btn.jpg" alt="Feedback Button"></a> -->
+    <a href="#" class="button"><img src="graphics/team_btn.jpg" alt="Team Button"></a>
+    <a href="#" class="button"><img src="graphics/spectator_btn.jpg" alt="Spectator Button"></a>
+</div>
+
+<div id="footerContainer">
+<img id="footer" src="graphics/footer.png" alt="Footer Image">
+</div>
+
+</body>
+
+
+<script>
+    const video=document.getElementById('titleVideo')
+    const setTime=()=>{
+        video.currentTime=0.0;
+        video.play();
+    }
+    video.addEventListener('mouseover',setTime)
+    video.addEventListener('click',setTime)
+
+</script>
+</html>
