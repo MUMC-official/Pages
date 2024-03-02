@@ -58,6 +58,7 @@
             margin-top: 20px; /* Centered the buttons horizontally */
         }
 
+
         .button {
             width: 400px;
             margin: 10px;
@@ -70,13 +71,13 @@
         }
 
         .button:hover{
-            width: 410px;
+            transform: scale(1.025);
             filter: saturate(100%) brightness(130%) hue-rotate(-10deg);
         }
 
         
         .button:active{
-            width: 400px;
+            transform: scale(1);
             filter: saturate(100%) brightness(130%) hue-rotate(-10deg);
         }
 
@@ -129,11 +130,11 @@
         }
 
         .button:hover{
-            width: 90%;
+            transform: scale(1.1);
         }    
         
         .button:active{
-            width: 85%;
+            transform: scale(1);
         }
 
 
@@ -146,31 +147,17 @@
             margin-top: 20px;
         }
 
- 
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
     </style>
 </head>
 <body>
 
+
 <img id="backgroundImage" src="graphics/background.jpg" alt="Background Image">
 
 <div id="titleContainer">
-    <video id="titleVideo" preload playsinline autoplay muted>
+    <video id="titleVideo" preload playsinline muted>
         <source src="video/title.webm" type="video/webm">
     </video>
     <img id="titleImage" src="graphics/title.png" alt="Title Image">
@@ -191,26 +178,42 @@
 
 <script>
     const video=document.getElementById('titleVideo')
-    const setTime=()=>{
-        video.currentTime=0.0;
-        video.play();
-    }
-    video.addEventListener('mouseover',setTime)
-    video.addEventListener('click',setTime)
-
-
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-
-    if (isIOS) {
-            // If iOS, hide video and show image
-            document.getElementById('titleVideo').style.display = 'none';
-            document.getElementById('titleImage').style.display = 'block';
-        } else {
-            // If not iOS, hide image and show video
-            document.getElementById('titleVideo').style.display = 'block';
-            document.getElementById('titleImage').style.display = 'none';
+    window.addEventListener('load', function () {
+        const video = document.getElementById('titleVideo');
+        const setTime = () => {
+            video.currentTime = 0.0;
+            video.play();
         }
 
+
+        const playVideoWithDelay = () => {
+            const delay = 1000;
+
+            setTimeout(() => {
+                setTime();
+            }, delay);
+        };
+
+        playVideoWithDelay();
+    
+        video.addEventListener('mouseover',setTime)
+        video.addEventListener('click',setTime)
+
+
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+        if (isIOS) {
+                // If iOS, hide video and show image
+                document.getElementById('titleVideo').style.display = 'none';
+                document.getElementById('titleImage').style.display = 'block';
+            } else {
+                // If not iOS, hide image and show video
+                document.getElementById('titleVideo').style.display = 'block';
+                document.getElementById('titleImage').style.display = 'none';
+            }
+
+    });
+    
 
 </script>
 </html>
