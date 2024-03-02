@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
+    <title>UHC Play Test 1.0</title>
+
+    <link rel="icon" type="image/png" href="graphics/icon.png">
+
+
     <style>
         body {
             margin: 0;
@@ -30,7 +34,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            width: 40%;
+            /* width: 40%; */
             height: auto;
             margin-bottom: 50px;
             /* margin-top: 10%; Adjusted margin-top for spacing */
@@ -40,6 +44,9 @@
             width: 650px;
         }
 
+        #titleImage {
+            width: 650px;
+        }
 
         #buttonsContainer {
             display: flex;
@@ -65,8 +72,12 @@
 
         .button:hover{
             width: 410px;
-            transform: translateX(10%);
-            transform: translateY(-10%);
+            filter: saturate(100%) brightness(130%) hue-rotate(-10deg);
+        }
+
+        
+        .button:active{
+            width: 400px;
             filter: saturate(100%) brightness(130%) hue-rotate(-10deg);
         }
 
@@ -86,6 +97,65 @@
             margin-top: 20px;
         }
 
+        @media only screen and (max-width: 600px){
+
+    
+            
+            #titleVideo {
+                padding-top: 100px;
+                width: 110%;
+            }
+
+            #titleImage {
+                padding-top: 100px;
+                width: 110%;
+            }
+
+            
+            #backgroundImage{
+                content: url("graphics/background_small.jpg");
+            }
+
+            
+        #buttonsContainer {
+            width: 100%;
+            margin-top: 10px; /* Centered the buttons horizontally */
+            margin-bottom: 50px; /* Centered the buttons horizontally */
+        }
+
+        .button {
+            width: 85%;
+            margin: 10px;
+        }
+
+        .button img {
+            width: 100%;
+            height: auto;
+        }
+
+        .button:hover{
+            width: 90%;
+        }    
+        
+        .button:active{
+            width: 85%;
+        }
+
+
+        #footer {
+            width: 250px;
+            padding-bottom: 20px;
+        }
+
+        #footerContainer {
+            margin-top: 20px;
+        }
+
+
+
+
+        }
+
     </style>
 </head>
 <body>
@@ -96,12 +166,13 @@
     <video id="titleVideo" preload playsinline autoplay muted>
         <source src="video/title.webm" type="video/webm">
     </video>
+    <img id="titleImage" src="graphics/title.png" alt="Title Image">
 </div>
 
 <div id="buttonsContainer">
-    <!-- <a href="#" class="button"><img src="graphics/feedback_btn.jpg" alt="Feedback Button"></a> -->
     <a href="#" class="button"><img src="graphics/team_btn.jpg" alt="Team Button"></a>
     <a href="#" class="button"><img src="graphics/spectator_btn.jpg" alt="Spectator Button"></a>
+    <a href="#" class="button"><img src="graphics/feedback_btn.jpg" alt="Feedback Button"></a>
 </div>
 
 <div id="footerContainer">
@@ -119,6 +190,20 @@
     }
     video.addEventListener('mouseover',setTime)
     video.addEventListener('click',setTime)
+
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+    if (isIOS) {
+            // If iOS, hide video and show image
+            document.getElementById('titleVideo').style.display = 'none';
+            document.getElementById('titleImage').style.display = 'block';
+        } else {
+            // If not iOS, hide image and show video
+            document.getElementById('titleVideo').style.display = 'block';
+            document.getElementById('titleImage').style.display = 'none';
+        }
+
 
 </script>
 </html>
