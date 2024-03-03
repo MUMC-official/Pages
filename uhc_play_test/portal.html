@@ -34,19 +34,20 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            /* width: 40%; */
+            max-width: 650px;
             height: auto;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             /* margin-top: 10%; Adjusted margin-top for spacing */
         }
 
         #titleVideo {
-            width: 650px;
+            width: 100%;
         }
 
         #titleImage {
-            width: 650px;
+            width: 100%;
         }
+
 
         #buttonsContainer {
             display: flex;
@@ -55,13 +56,13 @@
             justify-content: center;
             width: 100%;
             flex: 1;
-            margin-top: 20px; /* Centered the buttons horizontally */
+            margin-top: 10px; 
         }
 
 
         .button {
             width: 400px;
-            margin: 10px;
+            margin: 5px;
             transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
@@ -98,12 +99,12 @@
 
         @media only screen and (max-width: 600px){
             #titleVideo {
-                padding-top: 10%;
+                padding-top: 5%;
                 width: 110%;
             }
 
             #titleImage {
-                padding-top: 10%;
+                padding-top: 5%;
                 width: 110%;
             }
 
@@ -113,39 +114,39 @@
             }
 
             
-        #buttonsContainer {
-            width: 100%;
-            margin-top: 10px; /* Centered the buttons horizontally */
-            margin-bottom: 10px; /* Centered the buttons horizontally */
-        }
+            #buttonsContainer {
+                width: 100%;
+                margin-top: 30px; /* Centered the buttons horizontally */
+                margin-bottom: 30px; /* Centered the buttons horizontally */
+            }
 
-        .button {
-            width: 85%;
-            margin: 5px;
-        }
+            .button {
+                max-width: 85%;
+                margin: 5px;
+            }
 
-        .button img {
-            width: 100%;
-            height: auto;
-        }
+            .button img {
+                width: 100%;
+                height: auto;
+            }
 
-        .button:hover{
-            transform: scale(1.1);
-        }    
-        
-        .button:active{
-            transform: scale(1);
-        }
+            .button:hover{
+                transform: scale(1.1);
+            }    
+            
+            .button:active{
+                transform: scale(1);
+            }
 
 
-        #footer {
-            width: 250px;
-            padding-bottom: 100px;
-        }
+            #footer {
+                width: 250px;
+                padding-bottom: 100px;
+            }
 
-        #footerContainer {
-            margin-top: 20px;
-        }
+            #footerContainer {
+                margin-top: 20px;
+            }
 
 }
 
@@ -166,7 +167,8 @@
 <div id="buttonsContainer">
     <a href="https://forms.gle/bwTLy1aHN8jCZTkP7" class="button"><img src="graphics/team_btn.jpg" alt="Team Button"></a>
     <a href="https://forms.gle/nExTnMyrgZzyYfN7A" class="button"><img src="graphics/spectator_btn.jpg" alt="Spectator Button"></a>
-    <a href="#" class="button"><img src="graphics/feedback_btn.jpg" alt="Feedback Button"></a>
+    <a href="https://forms.gle/ekWFnraJbdzLB9r6A" class="button"><img src="graphics/feedback_btn.jpg" alt="Feedback Button"></a>
+    <a href="resource" class="button"><img src="graphics/resources_btn.jpg" alt="Resources Button"></a>
 </div>
 
 <div id="footerContainer">
