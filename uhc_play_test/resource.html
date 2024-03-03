@@ -9,12 +9,14 @@
 
 
     <style>
-        body {
-            margin: 0;
-            overflow: hidden;
+       body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
@@ -34,18 +36,18 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            /* width: 40%; */
+            max-width: 650px;
             height: auto;
             margin-bottom: 50px;
             /* margin-top: 10%; Adjusted margin-top for spacing */
         }
 
         #titleVideo {
-            width: 650px;
+            width: 100%;
         }
 
         #titleImage {
-            width: 650px;
+            width: 100%;
         }
 
         #buttonsContainer {
@@ -96,23 +98,6 @@
             height: auto;
         }
 
-        @media only screen and (max-width: 600px){
-            #titleVideo {
-                padding-top: 10%;
-                width: 110%;
-            }
-
-            #titleImage {
-                padding-top: 10%;
-                width: 110%;
-            }
-
-            
-            #backgroundImage{
-                content: url("graphics/background_small.jpg");
-            }
-
-            
         #buttonsContainer {
             width: 100%;
             margin-top: 10px; /* Centered the buttons horizontally */
@@ -147,7 +132,22 @@
             margin-top: 20px;
         }
 
-}
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            max-width: 600px;
+            margin: 20px; /* Add margin for spacing */
+        }
+
+        .image-container {
+            width: 100%; /* Images take up 100% of the container width */
+            margin: 30px;
+        }
+
+        .image-container img {
+            width: 100%; /* Images take up 100% of the container width */
+        }
 
     </style>
 </head>
@@ -163,12 +163,15 @@
     <img id="titleImage" src="graphics/title.png" alt="Title Image">
 </div>
 
-<div id="buttonsContainer">
-    <a href="#" class="button"><img src="graphics/team_btn.jpg" alt="Team Button"></a>
-    <a href="#" class="button"><img src="graphics/spectator_btn.jpg" alt="Spectator Button"></a>
-    <a href="#" class="button"><img src="graphics/feedback_btn.jpg" alt="Feedback Button"></a>
+<div class="image-column">
+    <div class="image-container">
+        <img src="graphics/posts/what.png" alt="what">
+    </div>
+    <div class="image-container">
+        <img src="graphics/posts/rules.png" alt="rules">
+    </div>
+    <!-- Add more image containers as needed -->
 </div>
-
 <div id="footerContainer">
 <img id="footer" src="graphics/footer.png" alt="Footer Image">
 </div>
