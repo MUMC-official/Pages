@@ -44,7 +44,7 @@
             width: 100%;
         }
 
-        #titleVideoIos {
+        #titleImage {
             width: 100%;
         }
 
@@ -109,7 +109,7 @@
                 width: 110%;
             }
 
-            #titleVideoIos {
+            #titleImage {
                 width: 110%;
             }
 
@@ -169,10 +169,7 @@
     <video id="titleVideo" preload playsinline muted>
         <source src="video/title.webm" type="video/webm">
     </video>
-
-    <video id="titleVideoIos" preload playsinline muted>
-        <source src="video/title.mov" type="video/mp4">
-    </video>
+    <img id="titleImage" src="graphics/title.png" alt="Title Image">
 </div>
 
 <div id="buttonsContainer">
@@ -218,11 +215,11 @@
         if (isIOS) {
                 // If iOS, hide video and show image
                 document.getElementById('titleVideo').style.display = 'none';
-                document.getElementById('titleVideoIos').style.display = 'block';
+                document.getElementById('titleImage').style.display = 'block';
             } else {
                 // If not iOS, hide image and show video
                 document.getElementById('titleVideo').style.display = 'block';
-                document.getElementById('titleVideoIos').style.display = 'none';
+                document.getElementById('titleImage').style.display = 'none';
             }
 
     });
