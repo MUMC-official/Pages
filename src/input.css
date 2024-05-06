@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-app-region: no-drag;
+        cursor: default;
+    }
+    
+    img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+      }
+
+    #backgroundImage {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    #titleContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 650px;
+        height: auto;
+        margin-bottom: -30px;
+        /* margin-top: 10%; Adjusted margin-top for spacing */
+    }
+    
+    #titleVideo {
+        width: 100%;
+    }
+    
+    #titleImage {
+        width: 100%;
+    }
+    
+    #buttonsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 650px;
+        flex: 1;
+        margin-top: 20px; /* Centered the buttons horizontally */
+    }
+    
+    /* .button {
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    } */
+
+    .button {
+        @apply hover:brightness-125 scale-125 cursor-pointer;
+    }
+    
+    #footer {
+        width: 400px;
+        padding-bottom: 20px;
+    }
+    
+    #footerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    #buttonsContainer {
+        width: 100%;
+        margin-top: 10px; /* Centered the buttons horizontally */
+        margin-bottom: 10px; /* Centered the buttons horizontally */
+    }
+    
+    .image-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        max-width: 600px;
+        margin: 20px; /* Add margin for spacing */
+    }
+    
+    .image-container {
+        width: 100%; /* Images take up 100% of the container width */
+        margin: 30px;
+    }
+    
+    .image-container img {
+        width: 100%; /* Images take up 100% of the container width */
+    }
+
+    @media only screen and (max-width: 600px){
+      
+        #footer {
+            width: 250px;
+            padding-bottom: 100px;
+        }
+    
+        #footerContainer {
+            margin-top: 20px;
+        }
+    
+          
+        #backgroundImage{
+            content: url("graphics/bg_small.jpg");
+            min-width: 120%;
+            height: 100%;
+        }
+    
+    }
+    
+}
