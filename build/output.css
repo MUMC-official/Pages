@@ -607,7 +607,6 @@ img {
   justify-content: center;
   max-width: 650px;
   height: auto;
-  margin-bottom: -30px;
   /* margin-top: 10%; Adjusted margin-top for spacing */
 }
 
@@ -651,34 +650,28 @@ img {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-@media only screen and (max-width: 600px){
-  #backgroundImage{
-    content: url(".uhc_season_1/graphics/bg_small.jpg");
-    min-width: 120%;
-    height: 100%;
-  }
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
+/* @media only screen and (max-width: 600px){
+      
+          
+        #backgroundImage{
+            content: url("./build/uhc_season_1/graphics/bg_small.jpg");
+            min-width: 120%;
+            height: 100%;
+        }
+    
+    } */
 
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
-.-mt-24 {
-  margin-top: -6rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.ml-\[-35px\] {
-  margin-left: -35px;
+.ml-\[-1\.4rem\] {
+  margin-left: -1.4rem;
 }
 
 .mt-0 {
@@ -701,6 +694,26 @@ img {
   margin-top: 1.25rem;
 }
 
+.ml-\[-1\.4vh\] {
+  margin-left: -1.4vh;
+}
+
+.ml-\[-2vh\] {
+  margin-left: -2vh;
+}
+
+.ml-\[-2vw\] {
+  margin-left: -2vw;
+}
+
+.ml-\[-3vw\] {
+  margin-left: -3vw;
+}
+
+.-mt-24 {
+  margin-top: -6rem;
+}
+
 .block {
   display: block;
 }
@@ -717,10 +730,6 @@ img {
   width: 12rem;
 }
 
-.w-80 {
-  width: 20rem;
-}
-
 .w-\[650px\] {
   width: 650px;
 }
@@ -733,28 +742,79 @@ img {
   width: 100%;
 }
 
-.max-w-screen-md {
-  max-width: 768px;
+.w-\[1vw\] {
+  width: 1vw;
 }
 
-.max-w-screen-sm {
-  max-width: 640px;
+.w-\[20vw\] {
+  width: 20vw;
+}
+
+.w-\[40vw\] {
+  width: 40vw;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
   flex: 1 1 0%;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .justify-center {
   justify-content: center;
 }
 
-@media (min-width: 640px) {
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 475px) {
+  .xs\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .xs\:w-\[30vh\] {
+    width: 30vh;
+  }
+
+  .xs\:w-\[10vw\] {
+    width: 10vw;
+  }
+
+  .xs\:w-\[1vw\] {
+    width: 1vw;
+  }
+
+  .xs\:w-\[20vw\] {
+    width: 20vw;
+  }
+
+  .xs\:w-\[40vw\] {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .sm\:-mt-24 {
+    margin-top: -6rem;
+  }
+
+  .sm\:ml-\[-35px\] {
+    margin-left: -35px;
+  }
+
+  .sm\:w-80 {
+    width: 20rem;
+  }
+
+  .sm\:w-48 {
+    width: 12rem;
+  }
+
   .sm\:max-w-screen-md {
-    max-width: 768px;
+    max-width: 800px;
   }
 }

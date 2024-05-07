@@ -57,7 +57,6 @@
         justify-content: center;
         max-width: 650px;
         height: auto;
-        margin-bottom: -30px;
         /* margin-top: 10%; Adjusted margin-top for spacing */
     }
     
@@ -107,15 +106,15 @@
         width: 100%; /* Images take up 100% of the container width */
     }
 
-    @media only screen and (max-width: 600px){
+    /* @media only screen and (max-width: 600px){
       
           
         #backgroundImage{
-            content: url(".uhc_season_1/graphics/bg_small.jpg");
+            content: url("./build/uhc_season_1/graphics/bg_small.jpg");
             min-width: 120%;
             height: 100%;
         }
     
-    }
+    } */
     
 }
