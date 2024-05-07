@@ -4,6 +4,17 @@
 
 @layer components {
 
+    html{
+        scroll-behavior: smooth;
+    }
+
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -250px;
+        visibility: hidden;
+    }
+
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -56,6 +67,7 @@
     
     #titleImage {
         width: 100%;
+        display: none;
     }
     
     #buttonsContainer {
@@ -74,27 +86,9 @@
     } */
 
     .button {
-        @apply hover:brightness-125 scale-125 cursor-pointer;
+        @apply hover:brightness-125 hover:scale-105 transition-all cursor-pointer;
     }
-    
-    #footer {
-        width: 400px;
-        padding-bottom: 20px;
-    }
-    
-    #footerContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    #buttonsContainer {
-        width: 100%;
-        margin-top: 10px; /* Centered the buttons horizontally */
-        margin-bottom: 10px; /* Centered the buttons horizontally */
-    }
+  
     
     .image-column {
         display: flex;
@@ -115,18 +109,9 @@
 
     @media only screen and (max-width: 600px){
       
-        #footer {
-            width: 250px;
-            padding-bottom: 100px;
-        }
-    
-        #footerContainer {
-            margin-top: 20px;
-        }
-    
           
         #backgroundImage{
-            content: url("graphics/bg_small.jpg");
+            content: url(".uhc_season_1/graphics/bg_small.jpg");
             min-width: 120%;
             height: 100%;
         }
